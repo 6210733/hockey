@@ -1,0 +1,90 @@
+/*
+   Fichier _app.scss
+
+   Ce fichier est généralement utilisé pour les styles spécifiques à l'application ou aux fonctionnalités
+   qui sont indépendantes du reste du site web.
+   Vous pouvez y inclure des styles pour des composants spécifiques à l'application ou pour des fonctionnalités
+   qui ne sont pas liées à l'interface utilisateur générale du site.
+   Cela permet de garder les styles modulaires et bien organisés.
+*/
+#app {
+   display: grid;
+   grid-template-rows: auto auto 1fr auto;
+   grid-template-areas: "header" "nav" "main" "footer";
+   min-height: 100%;
+   > header {
+      grid-area: header;
+      background: radial-gradient(circle, rgba(173,173,173,1) 39%, rgba(105,105,105,1) 69%);
+      color: white;
+   
+      div{
+         display: flex;
+         justify-self: center;
+         text-align: center;
+         text-align: center;
+      }
+
+      
+      h1{
+      text-align: center;
+      margin: auto;
+      
+     
+      
+      }
+      
+   }
+   > nav {
+      grid-area: nav;
+      // background-color:rgb(86, 86, 247);
+      background: rgb(61, 50, 253);
+      padding: 10px;
+      color: white;
+      margin-bottom: 40px;
+ 
+   }
+   > main {
+      grid-area: main;
+      background-color: hsl(var(--hue), var(--sat), calc(var(--lum) * .75));
+      color: white;
+   }
+   >// Styles for the footer
+footer {
+  background-color: #333; 
+  color: #fff; 
+  padding: 20px; 
+  font-size: 14px; 
+  margin-top: 50px;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      li {
+        margin-right: 20px; 
+        a {
+          color: #fff; 
+          text-decoration: none; 
+          &:hover {
+            text-decoration: underline; 
+          }
+        }
+      }
+    }
+  }
+
+  p {
+    margin-top: 10px; 
+    text-align: center;
+  }
+}
+
+   
+}
